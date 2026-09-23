@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Bautizo de Gian Piero y Jhojav Fernanda</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@400;600&display=swap">
+<style>
+:root{
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+  --bg:#fbf6f7; --card:#ffffff; --ink:#2c2833; --soft:#4d4957; --gold:#b8913f; --line:#ecdcc0;
+  --pink:#f6d3de; --pinkd:#d98aa5; --blue:#cfe3f5; --blued:#6fa3d1; --band1:#f3b9cc; --band2:#a9cdec;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){--bg:#171b24;--card:#1f2531;--ink:#f0eaf0;--soft:#d3cedc;--gold:#dcb96a;--line:#5b4d2c;--pink:#4a2f3b;--blue:#25384d;--band1:#a8506f;--band2:#3f74a3;}
+}
+:root[data-theme="dark"]{--bg:#171b24;--card:#1f2531;--ink:#f0eaf0;--soft:#d3cedc;--gold:#dcb96a;--line:#5b4d2c;--pink:#4a2f3b;--blue:#25384d;--band1:#a8506f;--band2:#3f74a3;}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Cormorant Garamond",Georgia,serif;display:flex;justify-content:center}
+.wrap{width:100%;max-width:480px;background:var(--card);overflow:hidden}
+section{padding:34px 24px;text-align:center;position:relative}
+.small{letter-spacing:.28em;text-transform:uppercase;font-size:13px;color:var(--soft);margin:0}
+.script{font-family:"Great Vibes","Brush Script MT",cursive;font-weight:400;color:var(--gold);line-height:1.1;margin:0}
+.txt{font-size:19px;line-height:1.5;color:var(--soft);margin:12px 4px}
+.hero{background:linear-gradient(180deg,var(--pink),var(--card) 45%,var(--blue) 130%);padding-top:40px}
+.hero .stage{position:relative;height:210px;margin:8px auto 0;max-width:320px}
+.hero .stage svg{position:absolute}
+.cross{left:50%;top:0;transform:translateX(-50%);width:130px}
+.dl{left:0;top:62px;width:78px}.dr{right:0;top:62px;width:78px;transform:scaleX(-1)}
+.b1{left:-8px;top:-6px;width:60px}.b2{right:-8px;top:-10px;width:66px}
+.btn{display:inline-block;margin-top:14px;padding:11px 26px;border-radius:999px;background:var(--pinkd);color:#fff;text-decoration:none;letter-spacing:.14em;text-transform:uppercase;font-size:14px;font-weight:600}
+.btn.blue{background:var(--blued)}
+.names{font-family:"Great Vibes","Brush Script MT",cursive;font-size:42px;line-height:1.2;margin:8px 0}
+.n1{color:var(--blued)}.n2{color:var(--pinkd)}
+.amp{color:var(--gold);font-size:30px;display:block}
+.divider{width:90px;height:1px;background:var(--gold);margin:18px auto;opacity:.7}
+.pad{display:grid;gap:14px;margin-top:16px}
+.pc{border-radius:16px;padding:16px 12px}
+.pc.b{background:var(--blue)}.pc.p{background:var(--pink)}
+.pc h3{margin:0 0 6px;font-size:14px;letter-spacing:.2em;text-transform:uppercase;color:var(--soft);font-weight:600}
+.pc h3 em{display:block;font-style:normal;font-family:"Great Vibes","Brush Script MT",cursive;font-size:30px;letter-spacing:0;text-transform:none;color:var(--gold);font-weight:400}
+.pc p{margin:2px 0;font-size:18px;text-transform:uppercase;letter-spacing:.06em}
+.date{display:flex;justify-content:center;align-items:center;gap:14px}
+.date .d{font-size:64px;font-weight:600;line-height:1}
+.date .s{border-top:1px solid var(--gold);border-bottom:1px solid var(--gold);padding:4px 10px;letter-spacing:.24em;font-size:14px;text-transform:uppercase;color:var(--soft)}
+.band{background:linear-gradient(90deg,var(--band1),var(--band2));color:#fff;padding:26px 16px}
+.band .script{color:#fff;font-size:36px}
+.count{display:flex;justify-content:center;gap:10px;margin-top:12px}
+.count div{min-width:64px}
+.count span{display:block;font-size:34px;font-weight:600}
+.count small{font-size:12px;letter-spacing:.16em;text-transform:uppercase}
+.gd .script{font-size:44px}
+.events{display:flex;justify-content:center;gap:26px;margin-top:14px;border-top:1px solid var(--line);padding-top:16px}
+.events div{font-size:19px}.events i{font-style:normal;font-size:34px;display:block}
+.events b{display:block;font-weight:600;font-size:22px}
+.loc{border-radius:20px;padding:22px 16px;margin-top:16px}
+.loc.p{background:var(--pink)}.loc.b{background:var(--blue)}
+.loc h3{margin:0;font-size:15px;letter-spacing:.2em;text-transform:uppercase;font-weight:600}
+.loc p{margin:6px 0;font-size:19px;line-height:1.4}
+.foot .script{font-size:40px}
+.ball{filter:drop-shadow(0 2px 3px rgba(0,0,0,.12))}
+.hero{background:radial-gradient(circle at 12% 6%,color-mix(in srgb,var(--pink) 85%,transparent),transparent 40%),radial-gradient(circle at 90% 20%,color-mix(in srgb,var(--blue) 90%,transparent),transparent 42%),radial-gradient(circle at 50% 55%,color-mix(in srgb,var(--pink) 45%,transparent),transparent 55%),var(--card);padding:22px 12px 34px}
+.stage2{display:block;width:100%;max-width:390px;margin:0 auto 4px;overflow:visible}
+.arc{font:600 12.5px "Cormorant Garamond",Georgia,serif;letter-spacing:.3em;fill:var(--soft)}
+@keyframes fl{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+@keyframes tw{0%,100%{opacity:.25}50%{opacity:1}}
+.fl{animation:fl 5s ease-in-out infinite}.tw{animation:tw 3s ease-in-out infinite}
+@media (prefers-reduced-motion:reduce){.fl,.tw{animation:none}}
+.par{margin:6px 0 4px}.par small{display:block;font-size:13px;letter-spacing:.24em;text-transform:uppercase;color:var(--soft);margin-top:10px}
+.par p{margin:2px 0;font-size:19px;text-transform:uppercase;letter-spacing:.06em}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<section class="hero">
+  <p class="small" style="margin-bottom:6px">Acompáñanos a ser parte de</p>
+  <svg class="stage2" viewBox="0 20 360 380" role="img" aria-label="Cruz dorada con flores, palomas y globos">
+    <defs>
+      <linearGradient id="gd" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f8e6a8"/><stop offset=".5" stop-color="#cfa244"/><stop offset="1" stop-color="#8f6a1f"/></linearGradient>
+      <radialGradient id="glow"><stop offset="0" stop-color="#fff" stop-opacity=".95"/><stop offset=".6" stop-color="#f6d3de" stop-opacity=".45"/><stop offset="1" stop-color="#cfe3f5" stop-opacity="0"/></radialGradient>
+      <radialGradient id="hl" cx=".32" cy=".28" r=".55"><stop offset="0" stop-color="#fff" stop-opacity=".85"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+      
+      <symbol id="bal" viewBox="0 0 60 100"><path d="M30 68c-4 10 4 16 0 30" stroke="#b9a98a" stroke-width="1" fill="none"/><path d="M30 63l-4 7h8z" fill="currentColor"/><ellipse cx="30" cy="34" rx="26" ry="31" fill="currentColor"/><ellipse cx="30" cy="34" rx="26" ry="31" fill="url(#hl)"/><ellipse cx="19" cy="20" rx="4.5" ry="8" fill="#fff" opacity=".6" transform="rotate(-25 19 20)"/></symbol>
+      <symbol id="dove" viewBox="0 0 90 60"><path d="M6 46L26 40C34 38 42 34 48 28C54 22 62 22 68 26C72 22 78 22 80 26L87 28L80 31C78 39 68 45 56 47C44 49 30 47 6 46Z" fill="#fff" stroke="#d6bd85" stroke-width="1.2"/><path d="M38 34C34 16 46 6 62 3C58 12 58 20 62 28C54 30 46 32 38 34Z" fill="#fff" stroke="#d6bd85" stroke-width="1.2"/><path d="M44 30C46 20 52 12 58 7M50 31C51 23 55 16 60 11" stroke="#e3d3ab" stroke-width="1" fill="none"/><circle cx="73" cy="26" r="1.3" fill="#7b6a4a"/></symbol>
+      <linearGradient id="lg1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#bcd6b4"/><stop offset="1" stop-color="#6f9469"/></linearGradient>
+      <linearGradient id="lg2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#d6e6cf"/><stop offset="1" stop-color="#8fae89"/></linearGradient>
+      <linearGradient id="lg3" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#86ae7e"/><stop offset="1" stop-color="#3d6a40"/></linearGradient>
+      <radialGradient id="gp" cx=".5" cy=".1" r=".95"><stop offset="0" stop-color="#fbd8e3"/><stop offset=".55" stop-color="#f2a3bd"/><stop offset="1" stop-color="#d9779a"/></radialGradient>
+      <radialGradient id="gw" cx=".5" cy=".1" r=".95"><stop offset="0" stop-color="#fff"/><stop offset=".55" stop-color="#f4ece5"/><stop offset="1" stop-color="#d8c9ba"/></radialGradient>
+      <radialGradient id="gb" cx=".5" cy=".1" r=".95"><stop offset="0" stop-color="#fee9f0"/><stop offset=".55" stop-color="#f7c3d4"/><stop offset="1" stop-color="#e79cb5"/></radialGradient>
+      <symbol id="rose" viewBox="-30 -30 60 60"><g stroke="#7a3550" stroke-opacity=".22" stroke-width=".8"><ellipse cy="-16" rx="13" ry="11.5" transform="rotate(0)"/><ellipse cy="-16" rx="13" ry="11.5" transform="rotate(60)"/><ellipse cy="-16" rx="13" ry="11.5" transform="rotate(120)"/><ellipse cy="-16" rx="13" ry="11.5" transform="rotate(180)"/><ellipse cy="-16" rx="13" ry="11.5" transform="rotate(240)"/><ellipse cy="-16" rx="13" ry="11.5" transform="rotate(300)"/><ellipse cy="-10" rx="9.5" ry="8.5" transform="rotate(30)"/><ellipse cy="-10" rx="9.5" ry="8.5" transform="rotate(102)"/><ellipse cy="-10" rx="9.5" ry="8.5" transform="rotate(174)"/><ellipse cy="-10" rx="9.5" ry="8.5" transform="rotate(246)"/><ellipse cy="-10" rx="9.5" ry="8.5" transform="rotate(318)"/><ellipse cy="-5.5" rx="6.5" ry="6" transform="rotate(15)"/><ellipse cy="-5.5" rx="6.5" ry="6" transform="rotate(105)"/><ellipse cy="-5.5" rx="6.5" ry="6" transform="rotate(195)"/><ellipse cy="-5.5" rx="6.5" ry="6" transform="rotate(285)"/></g><path d="M-2.5 -1a3 3 0 1 1 3 3.5M-5 0a5.5 5.5 0 1 1 5.5 5.5" stroke="#7a3550" stroke-opacity=".35" stroke-width=".9" fill="none"/></symbol>
+      <symbol id="rl" viewBox="0 0 40 20"><path d="M1 10C8 1 26 0 39 10C26 20 8 19 1 10Z" fill="url(#lg3)" stroke="#2f5433" stroke-opacity=".4" stroke-width=".6"/><path d="M1 10H37M10 10L16 4M10 10L16 16M18 10L25 4.5M18 10L25 15.5M26 10L32 6.5M26 10L32 13.5" stroke="#d6e8cf" stroke-opacity=".55" stroke-width=".6" fill="none"/></symbol>
+      <g id="el1"><ellipse cx="8" rx="8.5" ry="6.5" fill="url(#lg1)" stroke="#5d7f57" stroke-opacity=".35" stroke-width=".5"/><path d="M0 0H16M5 0L9 -3.5M5 0L9 3.5M10 0L13 -3M10 0L13 3" stroke="#f2f8ee" stroke-opacity=".5" stroke-width=".55" fill="none"/></g>
+      <g id="el2"><ellipse cx="8" rx="8.5" ry="6.5" fill="url(#lg2)" stroke="#5d7f57" stroke-opacity=".3" stroke-width=".5"/><path d="M0 0H16M5 0L9 -3.5M5 0L9 3.5M10 0L13 -3M10 0L13 3" stroke="#fff" stroke-opacity=".55" stroke-width=".55" fill="none"/></g>
+      <symbol id="branch" viewBox="0 0 100 100"><path d="M4 96C26 70 48 44 92 8" stroke="#6f8a68" stroke-width="2" fill="none"/><use href="#el1" transform="translate(14 84) rotate(-100) scale(1)"/><use href="#el2" transform="translate(14 84) rotate(15) scale(0.9)"/><use href="#el2" transform="translate(24 72) rotate(-95) scale(1.05)"/><use href="#el1" transform="translate(24 72) rotate(20) scale(0.95)"/><use href="#el1" transform="translate(36 60) rotate(-105) scale(1.05)"/><use href="#el2" transform="translate(36 60) rotate(10) scale(1)"/><use href="#el2" transform="translate(48 47) rotate(-95) scale(1)"/><use href="#el1" transform="translate(48 47) rotate(15) scale(0.95)"/><use href="#el1" transform="translate(63 33) rotate(-100) scale(1)"/><use href="#el2" transform="translate(63 33) rotate(10) scale(0.9)"/><use href="#el2" transform="translate(80 18) rotate(-90) scale(0.95)"/><use href="#el1" transform="translate(80 18) rotate(15) scale(0.85)"/><use href="#el1" transform="translate(92 8) rotate(-45) scale(1)"/></symbol>
+      <symbol id="sp" viewBox="-7 -7 14 14"><path d="M0-6L1.6-1.6L6 0L1.6 1.6L0 6L-1.6 1.6L-6 0L-1.6-1.6Z" fill="#d9b665"/></symbol>
+    </defs>
+    <circle cx="180" cy="176" r="128" fill="url(#glow)"/>
+
+    <use href="#branch" x="-14" y="262" width="150" height="150"/>
+    <use href="#branch" transform="translate(374 262) scale(-1 1)" width="150" height="150"/>
+
+    <g class="fl"><use href="#bal" x="-4" y="26" width="52" height="87" style="color:#f0a9c0"/></g>
+    <g class="fl" style="animation-delay:-2s"><use href="#bal" x="30" y="22" width="44" height="74" style="color:#e9d29b"/></g>
+    <g class="fl" style="animation-delay:-1s"><use href="#bal" x="312" y="26" width="52" height="87" style="color:#93bfe6"/></g>
+    <g class="fl" style="animation-delay:-3s"><use href="#bal" x="286" y="22" width="44" height="74" style="color:#f4dada"/></g>
+    <g class="fl" style="animation-delay:-1.5s"><use href="#bal" x="0" y="236" width="56" height="94" style="color:#e2bd62"/></g>
+    <g class="fl" style="animation-delay:-2.5s"><use href="#bal" x="304" y="240" width="56" height="94" style="color:#f0a9c0"/></g>
+
+    <g stroke="#8f6a1f" stroke-width="1.4">
+      <rect x="167" y="60" width="26" height="212" rx="5" fill="url(#gd)"/>
+      <rect x="120" y="110" width="120" height="26" rx="5" fill="url(#gd)"/>
+    </g>
+    <g fill="#fff6d6" opacity=".7"><rect x="173" y="66" width="14" height="200" rx="3"/><rect x="126" y="116" width="108" height="14" rx="3"/></g>
+    <g fill="#e8c56f" stroke="#8f6a1f" stroke-width="1"><circle cx="180" cy="58" r="4"/><circle cx="118" cy="123" r="4"/><circle cx="242" cy="123" r="4"/><circle cx="180" cy="274" r="4"/></g>
+
+    <g transform="translate(180 123) rotate(155)"><use href="#rl" x="0" y="-10.5" width="42" height="21.0"/></g><g transform="translate(180 123) rotate(205)"><use href="#rl" x="0" y="-10.5" width="42" height="21.0"/></g><g transform="translate(180 123) rotate(25)"><use href="#rl" x="0" y="-10.5" width="42" height="21.0"/></g><g transform="translate(180 123) rotate(335)"><use href="#rl" x="0" y="-10.5" width="42" height="21.0"/></g><g transform="translate(180 123) rotate(95)"><use href="#rl" x="0" y="-10.5" width="42" height="21.0"/></g><circle cx="147" cy="110" r="3.6" fill="#a9cdec" stroke="#86b3dc" stroke-width=".5"/><circle cx="152" cy="107" r="3.6" fill="#c6def2" stroke="#86b3dc" stroke-width=".5"/><circle cx="142" cy="107" r="3.6" fill="#a9cdec" stroke="#86b3dc" stroke-width=".5"/><circle cx="151" cy="114" r="3.6" fill="#c6def2" stroke="#86b3dc" stroke-width=".5"/><circle cx="143" cy="114" r="3.6" fill="#a9cdec" stroke="#86b3dc" stroke-width=".5"/><circle cx="147" cy="103" r="3.6" fill="#c6def2" stroke="#86b3dc" stroke-width=".5"/><circle cx="156" cy="111" r="3.6" fill="#a9cdec" stroke="#86b3dc" stroke-width=".5"/><circle cx="138" cy="111" r="3.6" fill="#c6def2" stroke="#86b3dc" stroke-width=".5"/><circle cx="214" cy="110" r="3.6" fill="#a9cdec" stroke="#86b3dc" stroke-width=".5"/><circle cx="219" cy="107" r="3.6" fill="#c6def2" stroke="#86b3dc" stroke-width=".5"/><circle cx="209" cy="107" r="3.6" fill="#a9cdec" stroke="#86b3dc" stroke-width=".5"/><circle cx="218" cy="114" r="3.6" fill="#c6def2" stroke="#86b3dc" stroke-width=".5"/><circle cx="210" cy="114" r="3.6" fill="#a9cdec" stroke="#86b3dc" stroke-width=".5"/><circle cx="214" cy="103" r="3.6" fill="#c6def2" stroke="#86b3dc" stroke-width=".5"/><circle cx="223" cy="111" r="3.6" fill="#a9cdec" stroke="#86b3dc" stroke-width=".5"/><circle cx="205" cy="111" r="3.6" fill="#c6def2" stroke="#86b3dc" stroke-width=".5"/><use href="#rose" x="140.0" y="118.0" width="34" height="34" fill="url(#gp)"/><use href="#rose" x="189.0" y="120.0" width="32" height="32" fill="url(#gb)"/><use href="#rose" x="157.0" y="93.0" width="22" height="22" fill="url(#gb)"/><use href="#rose" x="182.0" y="92.0" width="22" height="22" fill="url(#gp)"/><use href="#rose" x="157.0" y="100.0" width="46" height="46" fill="url(#gw)"/><circle cx="138" cy="128" r="1.7" fill="#fff" stroke="#e6d9c4" stroke-width=".4"/><circle cx="224" cy="127" r="1.7" fill="#fff" stroke="#e6d9c4" stroke-width=".4"/><circle cx="150" cy="94" r="1.7" fill="#fff" stroke="#e6d9c4" stroke-width=".4"/><circle cx="212" cy="92" r="1.7" fill="#fff" stroke="#e6d9c4" stroke-width=".4"/><circle cx="182" cy="150" r="1.7" fill="#fff" stroke="#e6d9c4" stroke-width=".4"/><circle cx="132" cy="116" r="1.7" fill="#fff" stroke="#e6d9c4" stroke-width=".4"/><circle cx="230" cy="116" r="1.7" fill="#fff" stroke="#e6d9c4" stroke-width=".4"/><g transform="translate(180 262) rotate(170)"><use href="#rl" x="0" y="-8.5" width="34" height="17.0"/></g><g transform="translate(180 262) rotate(10)"><use href="#rl" x="0" y="-8.5" width="34" height="17.0"/></g><g transform="translate(180 262) rotate(205)"><use href="#rl" x="0" y="-8.5" width="34" height="17.0"/></g><g transform="translate(180 262) rotate(335)"><use href="#rl" x="0" y="-8.5" width="34" height="17.0"/></g><use href="#rose" x="155.0" y="251.0" width="26" height="26" fill="url(#gp)"/><use href="#rose" x="179.0" y="251.0" width="26" height="26" fill="url(#gb)"/><use href="#rose" x="165.0" y="242.0" width="30" height="30" fill="url(#gw)"/>
+
+    <use href="#dove" x="44" y="166" width="84" height="56"/>
+    <use href="#dove" transform="translate(316 166) scale(-1 1)" width="84" height="56"/>
+
+    <use class="tw" href="#sp" x="84" y="110" width="12" height="12"/>
+    <use class="tw" href="#sp" x="264" y="100" width="14" height="14" style="animation-delay:-1s"/>
+    <use class="tw" href="#sp" x="120" y="250" width="10" height="10" style="animation-delay:-2s"/>
+    <use class="tw" href="#sp" x="238" y="240" width="12" height="12" style="animation-delay:-.5s"/>
+    <use class="tw" href="#sp" x="60" y="200" width="9" height="9" style="animation-delay:-1.5s"/>
+    <use class="tw" href="#sp" x="292" y="196" width="9" height="9" style="animation-delay:-2.5s"/>
+  </svg>
+  <h1 class="script" style="font-size:56px">Nuestro Bautizo</h1>
+  <p class="txt">Estamos muy felices de compartir este momento tan importante con ustedes</p>
+  <a class="btn" href="#gran-dia">Ver invitación</a>
+</section>
+
+<section>
+  <p class="small">Celebramos el bautizo de</p>
+  <div class="names"><span class="n1">Gian Piero</span><span class="amp">&amp;</span><span class="n2">Jhojav Fernanda</span></div>
+  <p class="txt">Que la luz de Dios ilumine su camino y los acompañe siempre. Gracias por estar en este día tan especial.</p>
+  <div class="divider"></div>
+  <p class="script" style="font-size:38px">Sus padres</p>
+  <div class="par"><small>Mamá</small><p>Milagros Lujan Chambi</p><small>Papá</small><p>Javier Fernando Ramirez Veliz</p></div>
+  <div class="divider"></div>
+  <p class="script" style="font-size:38px">Nuestros padrinos</p>
+  <div class="pad">
+    <div class="pc b"><h3>Padrinos de <em>Gian Piero</em></h3><p>Janet Carrizales Maguiña</p><p>René de la Torre Pumayauri</p></div>
+    <div class="pc p"><h3>Madrina de <em>Jhojav Fernanda</em></h3><p>Jessica Johana Calderón Janampa</p></div>
+  </div>
+</section>
+
+<section style="padding-top:8px">
+  <p class="txt" style="margin-bottom:14px">Para aceptar ser parte de nuestro camino</p>
+  <div class="date"><span class="s">Sábado</span><span class="d">10</span><span class="s">Octubre</span></div>
+</section>
+
+<div class="band">
+  <p class="script">¿Cuánto falta?</p>
+  <div class="count" id="count"></div>
+</div>
+
+<section class="gd" id="gran-dia">
+  <p class="script">El gran día</p>
+  <div class="events">
+    <div><i>⛪</i><b>Misa</b>9:30 am</div>
+    <div><i>🥂</i><b>Recepción</b>8:00 pm</div>
+  </div>
+
+  <div class="loc b">
+    <h3>Ceremonia · 9:30 am</h3>
+    <p>Parroquia San Josemaría Escrivá de Balaguer<br>Calle Las Bellas Artes 300, San Borja</p>
+    <a class="btn blue" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Parroquia+San+Josemar%C3%ADa+Escriv%C3%A1+de+Balaguer+Calle+Las+Bellas+Artes+300+San+Borja+Lima">Ver ubicación</a>
+  </div>
+
+  <div class="loc p">
+    <h3>Fiesta y recepción · 8:00 pm</h3>
+    <p>Av. José Carlos Mariátegui #284<br>San Gabriel</p>
+    <a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Av.+Jos%C3%A9+Carlos+Mari%C3%A1tegui+284+San+Gabriel+Lima">Ver ubicación</a>
+  </div>
+</section>
+
+<section class="foot" style="padding-top:8px;padding-bottom:40px">
+  <div class="divider"></div>
+  <p class="script">¡Te esperamos!</p>
+  <p class="small" style="margin-top:8px">Gian Piero &amp; Jhojav Fernanda</p>
+</section>
+
+</div>
+<script>
+(function(){
+  var el=document.getElementById('count');
+  var target=new Date(2026,9,10,9,30,0).getTime();
+  function pad(n){return n<10?'0'+n:''+n}
+  function tick(){
+    var d=target-Date.now();
+    if(d<=0){el.textContent='¡Hoy celebramos!';return}
+    var days=Math.floor(d/864e5),h=Math.floor(d%864e5/36e5),m=Math.floor(d%36e5/6e4),s=Math.floor(d%6e4/1e3);
+    el.innerHTML=[[pad(days),'Días'],[pad(h),'Horas'],[pad(m),'Minutos'],[pad(s),'Segundos']].map(function(x){return '<div><span>'+x[0]+'</span><small>'+x[1]+'</small></div>'}).join('');
+  }
+  tick();setInterval(tick,1000);
+})();
+</script>
+</body>
+</html>
