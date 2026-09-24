@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Bautizo de Gian Piero y Jhojav Fernanda</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@400;600&display=swap">
+
 <style>
 :root{
   box-sizing:border-box;
@@ -71,6 +72,9 @@ section{padding:34px 24px;text-align:center;position:relative}
 @media (prefers-reduced-motion:reduce){.fl,.tw{animation:none}}
 .par{margin:6px 0 4px}.par small{display:block;font-size:13px;letter-spacing:.24em;text-transform:uppercase;color:var(--soft);margin-top:10px}
 .par p{margin:2px 0;font-size:19px;text-transform:uppercase;letter-spacing:.06em}
+.music{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));width:54px;height:54px;border:0;border-radius:50%;background:linear-gradient(135deg,#f3b9cc,#a9cdec);color:#fff;font-size:20px;cursor:pointer;box-shadow:0 6px 18px rgba(0,0,0,.25);z-index:50}
+.music.on{animation:pulse 1.6s ease-in-out infinite}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}
 </style>
 </head>
 <body>
@@ -199,6 +203,49 @@ section{padding:34px 24px;text-align:center;position:relative}
     el.innerHTML=[[pad(days),'Días'],[pad(h),'Horas'],[pad(m),'Minutos'],[pad(s),'Segundos']].map(function(x){return '<div><span>'+x[0]+'</span><small>'+x[1]+'</small></div>'}).join('');
   }
   tick();setInterval(tick,1000);
+})();
+</script>
+<audio id="song" src="Bautizo.m4a" loop autoplay preload="auto"></audio>
+<button class="music" id="musicBtn" aria-label="Reproducir música">▶</button>
+<script>
+(function(){
+  var song=document.getElementById('song'), btn=document.getElementById('musicBtn');
+  var armed=true;
+  var opts={capture:true,passive:true};
+  var evs=['touchstart','touchmove','touchend','pointerdown','pointerup','click','keydown'];
+  function fromBtn(e){ return e && e.target && btn.contains(e.target); }
+  function tryPlay(){
+    var p=song.play();
+    if(p&&p.catch) p.catch(function(){});
+  }
+  function unlock(e){
+    if(!armed || fromBtn(e)) return;
+    tryPlay();
+  }
+  function off(){
+    if(!armed) return;
+    armed=false;
+    evs.forEach(function(n){ document.removeEventListener(n,unlock,true); });
+    window.removeEventListener('scroll',unlock,true);
+    window.removeEventListener('wheel',unlock,true);
+  }
+  function ui(){
+    var p=!song.paused;
+    btn.textContent=p?'❚❚':'▶';
+    btn.classList.toggle('on',p);
+    btn.setAttribute('aria-label',p?'Pausar música':'Reproducir música');
+  }
+  song.addEventListener('play',function(){ off(); ui(); });
+  song.addEventListener('pause',ui);
+  evs.forEach(function(n){ document.addEventListener(n,unlock,opts); });
+  window.addEventListener('scroll',unlock,opts);
+  window.addEventListener('wheel',unlock,opts);
+  btn.addEventListener('click',function(e){
+    e.stopPropagation();
+    if(song.paused) tryPlay(); else song.pause();
+  });
+  if(!song.paused){ off(); ui(); }
+  else tryPlay();
 })();
 </script>
 </body>
