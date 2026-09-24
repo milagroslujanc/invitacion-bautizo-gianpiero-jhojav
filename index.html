@@ -210,24 +210,41 @@ section{padding:34px 24px;text-align:center;position:relative}
 <script>
 (function(){
   var song=document.getElementById('song'), btn=document.getElementById('musicBtn');
-  var armed=true;
-  var opts={capture:true,passive:true};
-  var evs=['touchstart','touchmove','touchend','pointerdown','pointerup','click','keydown'];
+  var armed=true, lastY=null;
   function fromBtn(e){ return e && e.target && btn.contains(e.target); }
   function tryPlay(){
     var p=song.play();
     if(p&&p.catch) p.catch(function(){});
   }
-  function unlock(e){
-    if(!armed || fromBtn(e)) return;
-    tryPlay();
-  }
   function off(){
     if(!armed) return;
     armed=false;
-    evs.forEach(function(n){ document.removeEventListener(n,unlock,true); });
-    window.removeEventListener('scroll',unlock,true);
-    window.removeEventListener('wheel',unlock,true);
+    lastY=null;
+    document.removeEventListener('touchstart',onStart,true);
+    document.removeEventListener('touchmove',onMove,true);
+    document.removeEventListener('touchend',onEnd,true);
+    document.removeEventListener('pointerup',onEnd,true);
+    document.removeEventListener('click',onEnd,true);
+    document.removeEventListener('keydown',onEnd,true);
+  }
+  function onStart(e){
+    if(!armed || fromBtn(e)) return;
+    lastY=e.touches&&e.touches.length?e.touches[0].clientY:null;
+    tryPlay();
+  }
+  function onMove(e){
+    if(!armed || fromBtn(e) || !e.touches || !e.touches.length) return;
+    if(lastY==null) lastY=e.touches[0].clientY;
+    var y=e.touches[0].clientY, dy=lastY-y;
+    lastY=y;
+    if(e.cancelable) e.preventDefault();
+    if(dy) window.scrollBy(0, dy);
+    tryPlay();
+  }
+  function onEnd(e){
+    lastY=null;
+    if(!armed || fromBtn(e)) return;
+    tryPlay();
   }
   function ui(){
     var p=!song.paused;
@@ -237,9 +254,12 @@ section{padding:34px 24px;text-align:center;position:relative}
   }
   song.addEventListener('play',function(){ off(); ui(); });
   song.addEventListener('pause',ui);
-  evs.forEach(function(n){ document.addEventListener(n,unlock,opts); });
-  window.addEventListener('scroll',unlock,opts);
-  window.addEventListener('wheel',unlock,opts);
+  document.addEventListener('touchstart',onStart,{capture:true,passive:true});
+  document.addEventListener('touchmove',onMove,{capture:true,passive:false});
+  document.addEventListener('touchend',onEnd,{capture:true,passive:true});
+  document.addEventListener('pointerup',onEnd,{capture:true,passive:true});
+  document.addEventListener('click',onEnd,{capture:true,passive:true});
+  document.addEventListener('keydown',onEnd,{capture:true,passive:true});
   btn.addEventListener('click',function(e){
     e.stopPropagation();
     if(song.paused) tryPlay(); else song.pause();
